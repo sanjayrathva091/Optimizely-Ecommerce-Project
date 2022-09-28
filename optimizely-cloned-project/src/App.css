@@ -1,38 +1,87 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* * navbar styles * */
+.main-navbar {
+  padding: 21px 100px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu01, .menu02 {
+  height: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu01 > div+div {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.menu01 > div+div:hover {
+  color: blue;
+  border-top: 4px solid white;
+  border-bottom: 4px solid blue;
+  cursor: pointer;
+}
+
+.menu02 > div:first-child:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.login-style:hover, .search-style:hover {
+  color: blue;
+  border-top: 4px solid white;
+  border-bottom: 4px solid blue;
+  cursor: pointer;
+}
+
+.login-style, .search-style {
+  padding: 20px 0;
+}
+
+.search-style > span, .login-style > span {
+  display: flex;
+  gap: 5px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.menu02 button {
+  width: 140px;
+  height: 45px;
+  border: 0;
+  border-radius: 25px;
+  color: #fff;
+  background-color: #0037ff;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  transition: all 0.3s; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu02 button:hover {
+  background-color: darkblue;
+  cursor: pointer;
 }
+
+.main-navbar, .menu01, .menu02 {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* * material icon styles * */
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 20,
+  'opsz' 48
+}
+
+/* *media-query styles for navbar* */
