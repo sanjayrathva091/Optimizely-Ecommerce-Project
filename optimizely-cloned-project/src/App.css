@@ -66,6 +66,7 @@
   flex-direction: column;
   padding: 10px 20px;
   color: black;
+  background-color: #fff;
 }
 
 .login-style > ul li {

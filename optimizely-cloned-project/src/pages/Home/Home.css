@@ -1,0 +1,35 @@
+
+.section01 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.section01 > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
+    flex-wrap: wrap;
+    width: 35%;
+    margin-top: 20px;
+}
+
+.section01 > div:first-child h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 78px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.section01 > div:first-child p {
+    line-height: 2.5ch;
+    font-family: 'Raleway', sans-serif;
+    color: gray;
+}
+
+.section01 > div:last-child {
+    margin-top: 20px;
+    width: 60%;
+}
+

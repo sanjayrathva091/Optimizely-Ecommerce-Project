@@ -46,19 +46,19 @@ const Navbar = () => {
               <li>Where to?</li>
               <li>
                 Experimentation{" "}
-                <span class="material-symbols-rounded">east</span>
+                <span className="material-symbols-rounded">east</span>
               </li>
               <li>
-                Welcome<span class="material-symbols-rounded">east</span>
+                Welcome<span className="material-symbols-rounded">east</span>
               </li>
               <li>
-                Email Campaign<span class="material-symbols-rounded">east</span>
+                Email Campaign<span className="material-symbols-rounded">east</span>
               </li>
               <li>
-                Data Problem<span class="material-symbols-rounded">east</span>
+                Data Problem<span className="material-symbols-rounded">east</span>
               </li>
               <li>
-                Partners<span class="material-symbols-rounded">east</span>
+                Partners<span className="material-symbols-rounded">east</span>
               </li>
             </ul>
           </li>
