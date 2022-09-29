@@ -1,33 +1,37 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 /* * navbar styles * */
 .main-navbar {
   padding: 21px 100px;
-  font-size: 15px;
+  font-size: 14px;
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
 }
 
 .menu01, .menu02 {
   height: 32px;
+  list-style: none;
+  padding: 0;
 }
 
-.menu01 > div+div {
+.menu01 > li+li {
   display: flex;
   align-items: center;
   height: 100%;
   padding: 20px 0;
 }
 
-.menu01 > div+div:hover {
+.menu01 > li+li:hover {
   color: blue;
   border-top: 4px solid white;
   border-bottom: 4px solid blue;
   cursor: pointer;
 }
 
-.menu02 > div:first-child:hover {
+.menu02 > li:first-child:hover {
   color: blue;
   cursor: pointer;
 }
@@ -41,6 +45,7 @@
 
 .login-style, .search-style {
   padding: 20px 0;
+  position: relative;
 }
 
 .search-style > span, .login-style > span {
@@ -48,6 +53,39 @@
   gap: 5px;
   justify-content: center;
   align-items: center;
+}
+
+.login-style > ul {
+  position: absolute;
+  top: 67px;
+  right: 0;
+  left: -180px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  list-style: none;
+  text-align: start;
+  flex-direction: column;
+  padding: 10px 20px;
+  color: black;
+}
+
+.login-style > ul li {
+  padding: 13px 5px;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+
+.login-style > ul li+li {
+  font-weight: bold;
+  font-size: 16px;
+  color: blue;
+}
+
+.login-style > ul li+li:hover {
+  color: black;
+  gap: 35px;
 }
 
 .menu02 button {

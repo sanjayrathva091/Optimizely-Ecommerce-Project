@@ -1,35 +1,71 @@
+import { useEffect, useState } from "react";
+
 const Navbar = () => {
+  const [drop, setDrop] = useState(false);
+
+  const handleLoginStyle = () => {
+    setDrop(!drop);
+  };
+
+  useEffect(() => {
+    if (drop) {
+      document.querySelector(".login-style ul").style.display = "flex";
+    } else {
+      document.querySelector(".login-style ul").style.display = "none";
+    }
+  }, [drop]);
+
   return (
     <div>
       <div className="main-navbar">
-        <div className="menu01">
-          <div className="main-logo">
+        <ul className="menu01">
+          <li className="main-logo">
             <img
               src="https://www.optimizely.com/globalassets/02.-global-images/navigation/optimizely_logo_navigation.svg"
               alt="main-logo"
             />
-          </div>
-          <div>Products</div>
-          <div>Plans</div>
-          <div>Resources</div>
-          <div>Partners</div>
-        </div>
-        <div className="menu02">
-          <div>Support</div>
-          <div className="search-style">
+          </li>
+          <li>Products</li>
+          <li>Plans</li>
+          <li>Resources</li>
+          <li>Partners</li>
+        </ul>
+        <ul className="menu02">
+          <li>Support</li>
+          <li className="search-style">
             <span>
-              <span class="material-symbols-rounded">search</span>Search
+              <span className="material-symbols-rounded">search</span>Search
             </span>
-          </div>
-          <div className="login-style">
+          </li>
+          <li className="login-style" onClick={handleLoginStyle}>
             <span>
-              <span class="material-symbols-rounded">account_circle</span>Login
+              <span className="material-symbols-rounded">account_circle</span>
+              Login
             </span>
-          </div>
-          <div>
+            <ul>
+              <li>Where to?</li>
+              <li>
+                Experimentation{" "}
+                <span class="material-symbols-rounded">east</span>
+              </li>
+              <li>
+                Welcome<span class="material-symbols-rounded">east</span>
+              </li>
+              <li>
+                Email Campaign<span class="material-symbols-rounded">east</span>
+              </li>
+              <li>
+                Data Problem<span class="material-symbols-rounded">east</span>
+              </li>
+              <li>
+                Partners<span class="material-symbols-rounded">east</span>
+              </li>
+            </ul>
+          </li>
+          <li>
             <button>Get started</button>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   );
